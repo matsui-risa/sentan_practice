@@ -13,8 +13,6 @@ interface ForcastData {
 }
 
 export default function Home() {
-  // const area: String[] = ["山梨県", "長野県", "岐阜県", "静岡県", "愛知県"];
-  // const code: String[] = ["190000", "200000", "210000", "220000", "230000"];
   const provinces: Province[] = [
     new Province("山梨県", "190000"),
     new Province("長野県", "200000"),
@@ -42,7 +40,6 @@ export default function Home() {
   }, [idx]);
 
   return (
-    // <main className={styles.main}>
     <div>
       <p>{provinces[idx].name}</p>
       <p>{data ? data.text : "Now Loading"}</p>
@@ -53,6 +50,5 @@ export default function Home() {
         idx={idx}
       />
     </div>
-    // </main>
   );
 }
